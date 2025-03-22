@@ -1,0 +1,204 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Bali",
+      "location": "Bali",
+      "description": "Pulau dewata dengan pantai-pantai indah, budaya yang kaya, dan pemandangan alam yang memukau.",
+      "image": "assets/images/bali.jpg",
+      "rating": 4.8,
+      "popular_activities": ["Surfing", "Snorkeling", "Temple Visits", "Beach Relaxation"],
+      "best_time_to_visit": "April - October"
+    },
+    {
+      "id": 2,
+      "name": "Raja Ampat",
+      "location": "Papua Barat",
+      "description": "Surga bawah laut dengan keanekaragaman hayati laut terkaya di dunia dan pemandangan pulau karst yang menakjubkan.",
+      "image": "assets/images/raja-ampat.jpg",
+      "rating": 4.9,
+      "popular_activities": ["Diving", "Snorkeling", "Island Hopping", "Bird Watching"],
+      "best_time_to_visit": "October - April"
+    },
+    {
+      "id": 3,
+      "name": "Labuan Bajo",
+      "location": "Nusa Tenggara Timur",
+      "description": "Gerbang menuju Taman Nasional Komodo dan rumah bagi komodo, hewan purba yang hanya ada di Indonesia.",
+      "image": "assets/images/labuan-bajo.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Komodo Dragon Tour", "Diving", "Pink Beach", "Sunset Watching"],
+      "best_time_to_visit": "April - June"
+    },
+    {
+      "id": 4,
+      "name": "Yogyakarta",
+      "location": "Jawa Tengah",
+      "description": "Kota budaya dengan Candi Borobudur dan Prambanan serta tradisi Jawa yang masih kental.",
+      "image": "assets/images/yogyakarta.jpg",
+      "rating": 4.6,
+      "popular_activities": ["Temple Visits", "Malioboro Shopping", "Traditional Arts", "Culinary Tours"],
+      "best_time_to_visit": "May - September"
+    },
+    {
+      "id": 5,
+      "name": "Danau Toba",
+      "location": "Sumatera Utara",
+      "description": "Danau kawah vulkanik terbesar di dunia dengan Pulau Samosir di tengahnya.",
+      "image": "assets/images/danau-toba.jpg",
+      "rating": 4.5,
+      "popular_activities": ["Boat Tours", "Cultural Visits", "Swimming", "Hiking"],
+      "best_time_to_visit": "May - September"
+    },
+    {
+      "id": 6,
+      "name": "Lombok",
+      "location": "Nusa Tenggara Barat",
+      "description": "Pulau dengan keindahan pantai yang masih alami dan Gunung Rinjani yang megah.",
+      "image": "assets/images/lombok.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Trekking Mount Rinjani", "Beach Hopping", "Surfing", "Visiting Gili Islands"],
+      "best_time_to_visit": "May - September"
+    },
+    {
+      "id": 7,
+      "name": "Bromo",
+      "location": "Jawa Timur",
+      "description": "Gunung berapi aktif dengan pemandangan matahari terbit yang ikonik di Tanah Tengger.",
+      "image": "assets/images/bromo.jpg",
+      "rating": 4.8,
+      "popular_activities": ["Sunrise Tours", "Jeep Adventures", "Hiking", "Photography"],
+      "best_time_to_visit": "April - October"
+    },
+    {
+      "id": 8,
+      "name": "Tana Toraja",
+      "location": "Sulawesi Selatan",
+      "description": "Daerah pegunungan dengan budaya dan ritual pemakaman unik yang terkenal di dunia.",
+      "image": "assets/images/tana-toraja.jpg",
+      "rating": 4.6,
+      "popular_activities": ["Cultural Tours", "Traditional Funeral Ceremonies", "Trekking", "Village Visits"],
+      "best_time_to_visit": "June - September"
+    },
+    {
+      "id": 9,
+      "name": "Wakatobi",
+      "location": "Sulawesi Tenggara",
+      "description": "Taman nasional laut dengan terumbu karang dan kehidupan bawah laut yang spektakuler.",
+      "image": "assets/images/wakatobi.jpg",
+      "rating": 4.8,
+      "popular_activities": ["Diving", "Snorkeling", "Marine Conservation", "Beach Relaxation"],
+      "best_time_to_visit": "March - May"
+    },
+    {
+      "id": 10,
+      "name": "Belitung",
+      "location": "Bangka Belitung",
+      "description": "Pulau dengan pantai berpasir putih dan batu granit besar yang unik.",
+      "image": "assets/images/belitung.jpg",
+      "rating": 4.5,
+      "popular_activities": ["Island Hopping", "Snorkeling", "Lighthouse Visits", "Local Cuisine"],
+      "best_time_to_visit": "March - October"
+    },
+    {
+      "id": 11,
+      "name": "Kawah Ijen",
+      "location": "Jawa Timur",
+      "description": "Gunung berapi dengan fenomena blue fire dan danau asam terbesar di dunia.",
+      "image": "assets/images/kawah-ijen.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Blue Fire Night Trek", "Crater Lake Visit", "Sunrise Viewing", "Sulfur Mining Tour"],
+      "best_time_to_visit": "June - August"
+    },
+    {
+      "id": 12,
+      "name": "Derawan Islands",
+      "location": "Kalimantan Timur",
+      "description": "Kepulauan dengan keanekaragaman hayati laut dan danau ubur-ubur.",
+      "image": "assets/images/derawan.jpg",
+      "rating": 4.6,
+      "popular_activities": ["Swimming with Jellyfish", "Diving", "Sea Turtle Watching", "Relaxation"],
+      "best_time_to_visit": "April - August"
+    },
+    {
+      "id": 13,
+      "name": "Dieng Plateau",
+      "location": "Jawa Tengah",
+      "description": "Dataran tinggi vulkanik dengan candi kuno, danau berwarna, dan fenomena anak berambut gimbal.",
+      "image": "assets/images/dieng.jpg",
+      "rating": 4.5,
+      "popular_activities": ["Golden Sunrise", "Temple Visits", "Colored Lakes", "Crater Walk"],
+      "best_time_to_visit": "July - August"
+    },
+    {
+      "id": 14,
+      "name": "Bunaken",
+      "location": "Sulawesi Utara",
+      "description": "Taman laut nasional dengan keanekaragaman hayati bawah laut yang luar biasa.",
+      "image": "assets/images/bunaken.jpg",
+      "rating": 4.8,
+      "popular_activities": ["Diving", "Snorkeling", "Marine Life Observation", "Beach Activities"],
+      "best_time_to_visit": "April - October"
+    },
+    {
+      "id": 15,
+      "name": "Wae Rebo",
+      "location": "Nusa Tenggara Timur",
+      "description": "Desa tradisional di pegunungan dengan rumah adat kerucut yang unik.",
+      "image": "assets/images/wae-rebo.jpg",
+      "rating": 4.6,
+      "popular_activities": ["Cultural Immersion", "Traditional House Visit", "Trekking", "Photography"],
+      "best_time_to_visit": "April - July"
+    },
+    {
+      "id": 16,
+      "name": "Bandung",
+      "location": "Jawa Barat",
+      "description": "Kota dengan suhu sejuk, wisata alam, kuliner, dan belanja yang menarik.",
+      "image": "assets/images/bandung.jpg",
+      "rating": 4.4,
+      "popular_activities": ["Shopping", "Hot Springs", "Tea Plantation Visits", "Culinary Tours"],
+      "best_time_to_visit": "June - August"
+    },
+    {
+      "id": 17,
+      "name": "Sumba",
+      "location": "Nusa Tenggara Timur",
+      "description": "Pulau dengan budaya megalitik, upacara Pasola, dan pantai yang masih alami.",
+      "image": "assets/images/sumba.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Pasola Festival", "Traditional Village Tours", "Beach Exploration", "Cultural Learning"],
+      "best_time_to_visit": "June - September"
+    },
+    {
+      "id": 18,
+      "name": "Bukittinggi",
+      "location": "Sumatera Barat",
+      "description": "Kota di dataran tinggi dengan Ngarai Sianok, Jam Gadang, dan kuliner Minang yang lezat.",
+      "image": "assets/images/bukittinggi.jpg",
+      "rating": 4.5,
+      "popular_activities": ["Sianok Canyon Tour", "Japanese Tunnels", "Culinary Tours", "Cultural Visits"],
+      "best_time_to_visit": "May - July"
+    },
+    {
+      "id": 19,
+      "name": "Kepulauan Seribu",
+      "location": "DKI Jakarta",
+      "description": "Gugusan pulau-pulau kecil di Teluk Jakarta dengan pantai berpasir putih dan terumbu karang.",
+      "image": "assets/images/kepulauan-seribu.jpg",
+      "rating": 4.3,
+      "popular_activities": ["Snorkeling", "Island Hopping", "Beach Activities", "Marine Tourism"],
+      "best_time_to_visit": "March - August"
+    },
+    {
+      "id": 20,
+      "name": "Tanjung Puting",
+      "location": "Kalimantan Tengah",
+      "description": "Taman nasional yang terkenal sebagai habitat orangutan dan satwa liar lainnya.",
+      "image": "assets/images/tanjung-puting.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Orangutan Viewing", "River Cruises", "Wildlife Observation", "Jungle Trekking"],
+      "best_time_to_visit": "June - September"
+    }
+  ]
+} 

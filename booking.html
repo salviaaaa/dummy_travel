@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - Maziila Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Maziila<span>Travel</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Paket Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="booking.html">Pemesanan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Pemesanan</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Beranda</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Pemesanan</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Process Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="booking-process mb-5">
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <div class="process-step active" id="step1">
+                                    <div class="process-circle">1</div>
+                                    <p>Detail Pemesanan</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="process-step" id="step2">
+                                    <div class="process-circle">2</div>
+                                    <p>Detail Pemesan</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="process-step" id="step3">
+                                    <div class="process-circle">3</div>
+                                    <p>Pembayaran</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="process-step" id="step4">
+                                    <div class="process-circle">4</div>
+                                    <p>Konfirmasi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress mt-3">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-step Form -->
+                    <div class="booking-form">
+                        <!-- Step 1: Booking Details -->
+                        <div class="booking-step" id="bookingStep1">
+                            <div class="card shadow-sm border-0" style="border-radius: var(--border-radius);">
+                                <div class="card-header bg-white">
+                                    <h4 class="mb-0">Detail Pemesanan</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-4" id="selected-package-details">
+                                        <div class="col-md-4">
+                                            <img src="assets/images/package-placeholder.jpg" alt="Package" class="img-fluid rounded" id="package-image">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 id="package-name">Pilih Paket Wisata</h4>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="package-rating" id="package-rating">
+                                                    <i class="far fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                    <i class="far fa-star text-warning"></i>
+                                                </div>
+                                            </div>
+                                            <p class="mb-2"><i class="fas fa-calendar-days me-2 text-primary"></i><span id="package-duration">-</span></p>
+                                            <h5 class="text-primary" id="package-price">-</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="packageSelect" class="form-label">Pilih Paket Wisata</label>
+                                        <select class="form-select" id="packageSelect" required>
+                                            <option value="" selected disabled>Pilih paket wisata</option>
+                                            <!-- Options will be loaded from JSON -->
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="travelDate" class="form-label">Tanggal Keberangkatan</label>
+                                            <input type="date" class="form-control" id="travelDate" required min="">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="participants" class="form-label">Jumlah Peserta</label>
+                                            <input type="number" class="form-control" id="participants" min="1" max="20" value="1" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="specialRequests" class="form-label">Permintaan Khusus <small class="text-muted">(Opsional)</small></label>
+                                        <textarea class="form-control" id="specialRequests" rows="3" placeholder="Contoh: Makanan khusus, akomodasi, dll."></textarea>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white d-flex justify-content-between">
+                                    <a href="packages.html" class="btn btn-outline-secondary"><i class="fas fa-arrow-left me-2"></i>Kembali ke Paket</a>
+                                    <button type="button" class="btn btn-primary next-step" data-next="2">Lanjutkan<i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Customer Details -->
+                        <div class="booking-step d-none" id="bookingStep2">
+                            <div class="card shadow-sm border-0" style="border-radius: var(--border-radius);">
+                                <div class="card-header bg-white">
+                                    <h4 class="mb-0">Detail Pemesan</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="fullName" class="form-label">Nama Lengkap</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label">Nomor Telepon</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="idNumber" class="form-label">Nomor KTP</label>
+                                            <input type="text" class="form-control" id="idNumber" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Alamat</label>
+                                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                            <label class="form-check-label" for="termsCheck">
+                                                Saya setuju dengan <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">syarat dan ketentuan</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1"><i class="fas fa-arrow-left me-2"></i>Kembali</button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="3">Lanjutkan<i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment -->
+                        <div class="booking-step d-none" id="bookingStep3">
+                            <div class="card shadow-sm border-0" style="border-radius: var(--border-radius);">
+                                <div class="card-header bg-white">
+                                    <h4 class="mb-0">Pembayaran</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="booking-summary mb-4">
+                                        <h5>Ringkasan Pemesanan</h5>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><strong>Paket:</strong> <span id="summary-package">-</span></li>
+                                                    <li><strong>Tanggal:</strong> <span id="summary-date">-</span></li>
+                                                    <li><strong>Jumlah Peserta:</strong> <span id="summary-participants">-</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <ul class="list-unstyled">
+                                                    <li><strong>Nama:</strong> <span id="summary-name">-</span></li>
+                                                    <li><strong>Email:</strong> <span id="summary-email">-</span></li>
+                                                    <li><strong>Telepon:</strong> <span id="summary-phone">-</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="payment-details">
+                                        <h5>Detail Pembayaran</h5>
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <p><strong>Harga paket:</strong> <span id="package-base-price">-</span></p>
+                                                <p><strong>Jumlah peserta:</strong> <span id="total-participants">-</span></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><strong>Total bayar:</strong> <span id="total-payment" class="text-primary fs-5">-</span></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-methods mb-4">
+                                            <h5>Metode Pembayaran</h5>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentBankTransfer" value="bank_transfer" checked>
+                                                <label class="form-check-label" for="paymentBankTransfer">
+                                                    Transfer Bank
+                                                </label>
+                                            </div>
+                                            <div class="bank-details mb-3">
+                                                <div class="alert alert-light">
+                                                    <p class="mb-1"><strong>Bank BCA</strong></p>
+                                                    <p class="mb-1">No. Rekening: 1234567890</p>
+                                                    <p class="mb-0">Atas Nama: PT. Maziila Travel Indonesia</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentVirtualAccount" value="virtual_account">
+                                                <label class="form-check-label" for="paymentVirtualAccount">
+                                                    Virtual Account
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="paymentMethod" id="paymentEmoney" value="e_money">
+                                                <label class="form-check-label" for="paymentEmoney">
+                                                    E-Money (OVO, GoPay, DANA, LinkAja)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2"><i class="fas fa-arrow-left me-2"></i>Kembali</button>
+                                    <button type="button" class="btn btn-primary next-step" id="paymentButton" data-next="4">Bayar Sekarang<i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div class="booking-step d-none" id="bookingStep4">
+                            <div class="card shadow-sm border-0" style="border-radius: var(--border-radius);">
+                                <div class="card-header bg-white">
+                                    <h4 class="mb-0">Konfirmasi Pembayaran</h4>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="confirmation-content">
+                                        <div class="success-icon mb-4">
+                                            <i class="fas fa-check-circle fa-5x text-success"></i>
+                                        </div>
+                                        <h3>Pemesanan Berhasil!</h3>
+                                        <p class="mb-4">Konfirmasi pemesanan telah dikirim ke email Anda.</p>
+                                        
+                                        <div class="booking-receipt mb-4">
+                                            <div class="card mb-3 mx-auto" style="max-width: 500px;">
+                                                <div class="card-header bg-white">
+                                                    <h5 class="mb-0">Nomor Pesanan: <span id="booking-number">MT-2023-</span></h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="text-start">
+                                                        <p><strong>Paket:</strong> <span id="receipt-package">-</span></p>
+                                                        <p><strong>Nama:</strong> <span id="receipt-name">-</span></p>
+                                                        <p><strong>Tanggal Keberangkatan:</strong> <span id="receipt-date">-</span></p>
+                                                        <p><strong>Jumlah Peserta:</strong> <span id="receipt-participants">-</span></p>
+                                                        <p><strong>Total Bayar:</strong> <span id="receipt-payment">-</span></p>
+                                                        <p><strong>Status Pembayaran:</strong> <span class="badge bg-success">Lunas</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-outline-primary" id="printReceiptBtn"><i class="fas fa-print me-2"></i>Cetak Bukti Pembayaran</button>
+                                        </div>
+                                        
+                                        <div class="next-steps mb-4">
+                                            <h5>Langkah Selanjutnya</h5>
+                                            <div class="row mt-3">
+                                                <div class="col-md-4 mb-3">
+                                                    <div class="card h-100">
+                                                        <div class="card-body text-center">
+                                                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                                                            <h6>Cek Email</h6>
+                                                            <p class="small">Lihat detail perjalanan di email Anda</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div class="card h-100">
+                                                        <div class="card-body text-center">
+                                                            <i class="fas fa-calendar-check fa-2x text-primary mb-3"></i>
+                                                            <h6>Jadwal</h6>
+                                                            <p class="small">Persiapkan diri untuk perjalanan</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <div class="card h-100">
+                                                        <div class="card-body text-center">
+                                                            <i class="fas fa-phone-alt fa-2x text-primary mb-3"></i>
+                                                            <h6>Bantuan</h6>
+                                                            <p class="small">Hubungi kami jika ada pertanyaan</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white text-center">
+                                    <a href="index.html" class="btn btn-primary">Kembali ke Beranda</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Syarat dan Ketentuan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Pemesanan dan Pembayaran</h6>
+                    <p>Pemesanan dianggap sah setelah melakukan pembayaran minimal 50% dari total biaya perjalanan. Pelunasan harus dilakukan paling lambat 7 hari sebelum tanggal keberangkatan.</p>
+                    
+                    <h6>2. Pembatalan dan Pengembalian Dana</h6>
+                    <p>Ketentuan pembatalan:
+                        <ul>
+                            <li>30+ hari sebelum keberangkatan: pengembalian 90%</li>
+                            <li>15-29 hari sebelum keberangkatan: pengembalian 75%</li>
+                            <li>7-14 hari sebelum keberangkatan: pengembalian 50%</li>
+                            <li>Kurang dari 7 hari: tidak ada pengembalian</li>
+                        </ul>
+                    </p>
+                    
+                    <h6>3. Perubahan Jadwal</h6>
+                    <p>Perubahan jadwal dapat dilakukan minimal 14 hari sebelum keberangkatan, tergantung ketersediaan. Biaya tambahan mungkin berlaku.</p>
+                    
+                    <h6>4. Dokumen Perjalanan</h6>
+                    <p>Peserta bertanggung jawab atas kelengkapan dokumen perjalanan (KTP, paspor, visa, dll).</p>
+                    
+                    <h6>5. Asuransi Perjalanan</h6>
+                    <p>Peserta disarankan untuk memiliki asuransi perjalanan pribadi. Maziila Travel tidak bertanggung jawab atas kecelakaan, kehilangan barang, atau kejadian tak terduga lainnya.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Saya Mengerti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase">Maziila Travel</h5>
+                    <p>Jelajahi keindahan Indonesia bersama kami. Kami menawarkan pengalaman perjalanan terbaik dengan harga terjangkau.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Link</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Beranda</a></li>
+                        <li><a href="destinations.html" class="text-white">Destinasi</a></li>
+                        <li><a href="packages.html" class="text-white">Paket Wisata</a></li>
+                        <li><a href="about.html" class="text-white">Tentang Kami</a></li>
+                        <li><a href="contact.html" class="text-white">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Jl. Merdeka No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i>(021) 1234-5678</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@maziilatravel.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase">Newsletter</h5>
+                    <p>Dapatkan informasi terbaru dan promo menarik dari kami</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda" aria-describedby="button-subscribe">
+                        <button class="btn btn-primary" type="button" id="button-subscribe">Langganan</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 Maziila Travel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white">Kebijakan Privasi</a> | 
+                    <a href="#" class="text-white">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/booking.js"></script>
+</body>
+</html> 

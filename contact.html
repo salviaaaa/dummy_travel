@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Maziila Travel</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bold">Maziila</span> Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Paket Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex flex-column justify-content-center text-white text-center">
+            <h1 class="display-4 fw-bold">Hubungi Kami</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Beranda</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Kontak</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-info">
+                        <h2 class="mb-4">Informasi Kontak</h2>
+                        <p class="mb-4">Silakan hubungi kami melalui informasi kontak di bawah ini atau isi formulir untuk mengirimkan pesan.</p>
+                        
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle p-3 me-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5 class="mb-1">Alamat</h5>
+                                <p class="mb-0">Jl. Merdeka No. 123, Jakarta Pusat, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle p-3 me-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5 class="mb-1">Telepon</h5>
+                                <p class="mb-0">+62 812 3456 7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle p-3 me-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0">info@maziilatravel.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <div class="contact-icon bg-primary text-white rounded-circle p-3 me-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5 class="mb-1">Jam Operasional</h5>
+                                <p class="mb-0">Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 15:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-media mt-5">
+                            <h5 class="mb-3">Ikuti Kami</h5>
+                            <div class="d-flex">
+                                <a href="#" class="social-icon me-3 bg-primary text-white rounded p-3"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon me-3 bg-primary text-white rounded p-3"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon me-3 bg-primary text-white rounded p-3"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon me-3 bg-primary text-white rounded p-3"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="contact-form-container bg-light p-4 p-lg-5 rounded shadow-sm">
+                        <h2 class="mb-4">Kirim Pesan</h2>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" required>
+                                        <label for="name">Nama Lengkap</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="tel" class="form-control" id="phone" placeholder="Nomor Telepon">
+                                        <label for="phone">Nomor Telepon</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <select class="form-select" id="subject" required>
+                                            <option value="" selected disabled>Pilih Subjek</option>
+                                            <option value="Informasi Destinasi">Informasi Destinasi</option>
+                                            <option value="Pemesanan Paket">Pemesanan Paket</option>
+                                            <option value="Keluhan">Keluhan</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
+                                        <label for="subject">Subjek</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" placeholder="Pesan" style="height: 150px" required></textarea>
+                                        <label for="message">Pesan</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            Saya menyetujui kebijakan privasi dan persyaratan layanan
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6664263711!2d106.82495841476496!3d-6.175392095527818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1652345678901!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Pertanyaan Umum</h2>
+                <p class="text-muted">Jawaban dari pertanyaan yang sering diajukan</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Bagaimana cara memesan paket wisata?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Anda dapat memesan paket wisata melalui website kami dengan mengunjungi halaman Paket Wisata, memilih paket yang diinginkan, dan mengklik tombol "Pesan Sekarang". Anda juga dapat menghubungi kami melalui telepon atau email untuk pemesanan manual.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Apakah harga paket wisata sudah termasuk tiket pesawat?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Beberapa paket wisata kami sudah termasuk tiket pesawat, dan beberapa tidak. Detail mengenai apa saja yang termasuk dalam paket akan selalu dicantumkan dalam deskripsi paket. Jika Anda memerlukan informasi lebih lanjut, silakan hubungi tim layanan pelanggan kami.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Bagaimana kebijakan pembatalan pemesanan?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Pembatalan yang dilakukan minimal 14 hari sebelum tanggal keberangkatan akan mendapatkan pengembalian dana sebesar 75%. Pembatalan 7-13 hari sebelum keberangkatan mendapatkan pengembalian 50%. Pembatalan kurang dari 7 hari sebelum keberangkatan tidak mendapatkan pengembalian dana.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Apakah paket wisata dapat disesuaikan?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, kami menyediakan layanan custom tour di mana Anda dapat menyesuaikan destinasi, akomodasi, dan aktivitas sesuai dengan keinginan Anda. Silakan hubungi tim kami untuk mendiskusikan kebutuhan perjalanan Anda.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Apakah Maziila Travel menyediakan guide berbahasa asing?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, kami memiliki guide yang fasih berbahasa Inggris, Mandarin, Jepang, Korea, dan beberapa bahasa Eropa. Silakan beritahu kami kebutuhan bahasa Anda saat melakukan pemesanan.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-2">Berlangganan Newsletter</h2>
+                    <p class="mb-0">Dapatkan informasi terbaru dan penawaran eksklusif langsung ke email Anda</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="newsletter-form">
+                        <form class="d-flex">
+                            <input type="email" class="form-control form-control-lg me-2" placeholder="Masukkan email Anda">
+                            <button type="submit" class="btn btn-light btn-lg">Daftar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Maziila Travel</h5>
+                    <p>Kami menyediakan pengalaman wisata terbaik di Indonesia dengan layanan profesional dan paket wisata yang menarik.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Halaman</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="destinations.html" class="text-white text-decoration-none">Destinasi</a></li>
+                        <li class="mb-2"><a href="packages.html" class="text-white text-decoration-none">Paket Wisata</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Merdeka No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 812 3456 7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@maziilatravel.com</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Berlangganan</h5>
+                    <p>Dapatkan update dan penawaran terbaru dari kami</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda">
+                        <button class="btn btn-primary" type="button">Daftar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Maziila Travel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Syarat & Ketentuan</a></li>
+                        <li class="list-inline-item ms-3"><a href="#" class="text-white text-decoration-none">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,692 @@
+/* Base Styles */
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #87CEEB;
+    --dark-color: #0066CC;
+    --light-color: #f9f9f9;
+    --gray-color: #666666;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --danger-color: #dc3545;
+    --white: #ffffff;
+    --black: #333333;
+    --border-color: #dddddd;
+    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --border-radius: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #ff5252;
+    border-color: #ff5252;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-title h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-dark {
+    background-color: rgba(33, 37, 41, 0.9);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.navbar-brand span {
+    color: var(--primary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link.active:after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.25rem;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    background: url('../images/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Page Header */
+.page-header {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: url('../images/page-header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.page-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Featured Destinations */
+.destination-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.destination-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.destination-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .destination-img img {
+    transform: scale(1.1);
+}
+
+.destination-img .destination-rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.destination-img .location-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: #fff;
+}
+
+.destination-content {
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
+.destination-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.destination-text {
+    color: var(--gray-color);
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.destination-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-color);
+    font-size: 0.875rem;
+}
+
+/* Popular Packages */
+.package-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    background-color: #fff;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.package-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.package-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.package-card:hover .package-img img {
+    transform: scale(1.1);
+}
+
+.package-price {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.package-content {
+    padding: 1.5rem;
+}
+
+.package-rating {
+    margin-bottom: 0.5rem;
+    color: var(--warning-color);
+}
+
+.package-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-info {
+    margin-bottom: 1rem;
+}
+
+.package-info span {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.875rem;
+    color: var(--gray-color);
+}
+
+.package-info i {
+    margin-right: 0.25rem;
+    color: var(--primary-color);
+}
+
+.package-text {
+    color: var(--gray-color);
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;      
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Feature Box */
+.feature-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials */
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.testimonial-rating i {
+    font-size: 0.875rem;
+}
+
+/* CTA Section */
+.cta-section {
+    position: relative;
+    background: url('../images/cta-bg.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 107, 107, 0.9), rgba(78, 205, 196, 0.9));
+    z-index: -1;
+}
+
+/* About Page */
+.about-image .experience-badge {
+    bottom: 20px;
+    right: -20px;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mission-box {
+    transition: all 0.3s ease;
+}
+
+.mission-box:hover {
+    transform: translateY(-10px);
+}
+
+.team-member .member-img img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.team-member:hover .member-img img {
+    transform: scale(1.1);
+}
+
+.award-item img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.grayscale:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* Contact Page */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.form-floating > .form-control, 
+.form-floating > .form-select {
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+}
+
+.map-container {
+    filter: grayscale(50%);
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    filter: grayscale(0);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-image .experience-badge {
+        right: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .hero-section {
+        height: 70vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header {
+        height: 30vh;
+        min-height: 300px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.75rem;
+    }
+    
+    .destination-img, .package-img {
+        height: 200px;
+    }
+    
+    .destination-title, .package-title {
+        font-size: 1.1rem;
+    }
+    
+    .about-image .experience-badge {
+        padding: 1rem;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .about-image .experience-badge .display-4 {
+        font-size: 2rem;
+    }
+    
+    .award-item img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .page-header {
+        height: 25vh;
+        min-height: 250px;
+    }
+    
+    .destination-img, .package-img {
+        height: 180px;
+    }
+    
+    .team-member .member-img img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .award-item img {
+        height: 60px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-icon {
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+}
+
+/* Booking Process Styles */
+.booking-process {
+    margin-bottom: 2rem;
+}
+
+.process-step {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.process-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    color: var(--gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.process-step.active .process-circle {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 0 5px rgba(30, 144, 255, 0.2);
+}
+
+.progress {
+    height: 5px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+.booking-form .card {
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.booking-step {
+    transition: all 0.3s ease;
+}
+
+.bank-details {
+    border-left: 3px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    background-color: rgba(135, 206, 235, 0.1);
+}
+
+.booking-receipt .card {
+    border: 2px dashed var(--border-color);
+    background-color: rgba(249, 249, 249, 0.7);
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: var(--success-color);
+}
+
+.next-steps .card {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.next-steps .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 767.98px) {
+    .process-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 0.875rem;
+    }
+    
+    .booking-process .progress {
+        height: 4px;
+    }
+} 

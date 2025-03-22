@@ -1,0 +1,124 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "name": "Bali Classic Tour",
+      "duration": "5 Days 4 Nights",
+      "price": 5500000,
+      "destinations": [1],
+      "description": "Paket wisata klasik mengunjungi tempat-tempat ikonik di Bali seperti Tanah Lot, Ubud, dan Kuta.",
+      "highlights": ["Kunjungan ke Pura Tanah Lot", "Pertunjukan Tari Kecak", "Bersantai di Pantai Kuta", "Eksplorasi Hutan Monyet Ubud"],
+      "inclusions": ["Hotel bintang 4", "Transportasi AC", "Guide berbahasa Indonesia/Inggris", "Makan sesuai jadwal", "Tiket masuk wisata"],
+      "image": "assets/images/package-bali.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "name": "Wonderful Raja Ampat",
+      "duration": "6 Days 5 Nights",
+      "price": 12000000,
+      "destinations": [2],
+      "description": "Petualangan ke surga bawah laut Raja Ampat dengan diving, snorkeling, dan island hopping.",
+      "highlights": ["Diving di Melissa's Garden", "Menikmati Sunset di Piaynemo", "Snorkeling di Pasir Timbul", "Mengunjungi Desa Arborek"],
+      "inclusions": ["Homestay/Resort", "Speedboat transfers", "Diving/Snorkeling Equipment", "Makan 3x sehari", "Guide lokal"],
+      "image": "assets/images/package-raja-ampat.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 3,
+      "name": "Komodo Dragon Adventure",
+      "duration": "4 Days 3 Nights",
+      "price": 7500000,
+      "destinations": [3],
+      "description": "Petualangan ke Pulau Komodo untuk melihat hewan purba langka dan menikmati keindahan Labuan Bajo.",
+      "highlights": ["Trekking di Pulau Komodo & Rinca", "Snorkeling di Pink Beach", "Sunset Sailing Trip", "Menikmati Pulau Padar"],
+      "inclusions": ["Hotel di Labuan Bajo", "Kapal tour", "Makan selama trip", "Ranger Guide", "Snorkeling equipment"],
+      "image": "assets/images/package-komodo.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "name": "Yogyakarta Cultural Heritage",
+      "duration": "3 Days 2 Nights",
+      "price": 2500000,
+      "destinations": [4],
+      "description": "Menjelajahi warisan budaya dan sejarah Yogyakarta dengan kunjungan ke candi dan keraton.",
+      "highlights": ["Sunrise di Borobudur", "Mengunjungi Candi Prambanan", "Tour Keraton Yogyakarta", "Belanja di Malioboro"],
+      "inclusions": ["Hotel bintang 3", "Transportasi AC", "Guide lokal", "Sarapan", "Tiket masuk objek wisata"],
+      "image": "assets/images/package-yogyakarta.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Explore Lombok & Gili",
+      "duration": "5 Days 4 Nights",
+      "price": 6000000,
+      "destinations": [6],
+      "description": "Menjelajahi keindahan Lombok dan Kepulauan Gili dengan pantai-pantai eksotis.",
+      "highlights": ["Menikmati Pantai Kuta Lombok", "Snorkeling di Gili Trawangan", "Mengunjungi Air Terjun Sendang Gile", "Desa Sade Tour"],
+      "inclusions": ["Hotel dan Villa", "Transportasi", "Tiket boat ke Gili", "Snorkeling trip", "Makan pagi"],
+      "image": "assets/images/package-lombok.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 6,
+      "name": "Bromo Sunrise & Ijen Blue Fire",
+      "duration": "3 Days 2 Nights",
+      "price": 3500000,
+      "destinations": [7, 11],
+      "description": "Kombinasi pengalaman melihat matahari terbit di Gunung Bromo dan fenomena blue fire di Kawah Ijen.",
+      "highlights": ["Sunrise di Gunung Bromo", "Lautan Pasir", "Blue Fire Kawah Ijen", "Perkebunan", "Danau Kawah"],
+      "inclusions": ["Hotel", "Jeep 4x4", "Guide pendakian", "Transportasi antar kota", "Perlengkapan safety Ijen"],
+      "image": "assets/images/package-bromo-ijen.jpg",
+      "rating": 4.8
+    },
+    {
+      "id": 7,
+      "name": "Toraja Cultural Immersion",
+      "duration": "4 Days 3 Nights",
+      "price": 4500000,
+      "destinations": [8],
+      "description": "Mengenal budaya unik Tana Toraja dengan mengunjungi desa tradisional dan upacara adat.",
+      "highlights": ["Kunjungan ke Desa Tradisional", "Pemakaman Tebing", "Upacara Adat (jika beruntung)", "Museum Tongkonan"],
+      "inclusions": ["Hotel di Rantepao", "Transportasi dari Makassar", "Guide lokal", "Makan 3x sehari", "Donasi desa"],
+      "image": "assets/images/package-toraja.jpg",
+      "rating": 4.7
+    },
+    {
+      "id": 8,
+      "name": "Wonderful Sumatra",
+      "duration": "6 Days 5 Nights",
+      "price": 7000000,
+      "destinations": [5, 18],
+      "description": "Menjelajahi keindahan alam Sumatera dengan Danau Toba dan budaya Minangkabau.",
+      "highlights": ["Danau Toba & Pulau Samosir", "Rumah Gadang", "Ngarai Sianok", "Jam Gadang", "Kuliner Minang"],
+      "inclusions": ["Hotel", "Transportasi darat", "Guide lokal", "Tiket masuk wisata", "Makan pagi"],
+      "image": "assets/images/package-sumatra.jpg",
+      "rating": 4.6
+    },
+    {
+      "id": 9,
+      "name": "Marine Paradise",
+      "duration": "7 Days 6 Nights",
+      "price": 9500000,
+      "destinations": [9, 14],
+      "description": "Menjelajahi keindahan bawah laut terbaik di Indonesia dengan mengunjungi Wakatobi dan Bunaken.",
+      "highlights": ["Diving di Wakatobi", "Snorkeling di Bunaken", "Island Hopping", "Marine Conservation Tour"],
+      "inclusions": ["Resort/Homestay", "Transportasi", "Diving/Snorkeling Equipment", "Dive Master", "Makan 3x sehari"],
+      "image": "assets/images/package-marine.jpg",
+      "rating": 4.9
+    },
+    {
+      "id": 10,
+      "name": "Borneo Wildlife Adventure",
+      "duration": "5 Days 4 Nights",
+      "price": 8000000,
+      "destinations": [20],
+      "description": "Petualangan mengunjungi habitat orangutan dan satwa liar di hutan Kalimantan.",
+      "highlights": ["Tanjung Puting National Park", "Melihat Orangutan", "Klotok River Cruise", "Camp Leakey Visit"],
+      "inclusions": ["Penginapan hutan & hotel", "Klotok boat", "Guide naturalis", "Makan selama trip", "Donasi konservasi"],
+      "image": "assets/images/package-borneo.jpg",
+      "rating": 4.8
+    }
+  ]
+} 

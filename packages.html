@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Wisata - Maziila Travel</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bold">Maziila</span> Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="packages.html">Paket Wisata</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex flex-column justify-content-center text-white text-center">
+            <h1 class="display-4 fw-bold">Paket Wisata</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Beranda</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Paket Wisata</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section class="packages-section py-5">
+        <div class="container">
+            <!-- Search and Filter -->
+            <div class="row mb-5">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="input-group">
+                        <input type="text" id="package-search" class="form-control" placeholder="Cari paket wisata...">
+                        <button class="btn btn-primary" type="button" id="search-btn">
+                            <i class="fas fa-search"></i> Cari
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <select class="form-select" id="duration-filter">
+                        <option value="all">Semua Durasi</option>
+                        <option value="1-3">1-3 Hari</option>
+                        <option value="4-7">4-7 Hari</option>
+                        <option value="8+">8+ Hari</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select" id="price-filter">
+                        <option value="all">Semua Harga</option>
+                        <option value="0-3000000">< Rp 3.000.000</option>
+                        <option value="3000000-7000000">Rp 3.000.000 - Rp 7.000.000</option>
+                        <option value="7000000+">Rp 7.000.000+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Packages List -->
+            <div class="row g-4" id="packages-container">
+                <!-- Packages will be loaded here from JSON -->
+                <div class="text-center w-100 py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Packages pagination" class="mt-5">
+                <ul class="pagination justify-content-center" id="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Sebelumnya</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Selanjutnya</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Package Detail Modal -->
+    <div class="modal fade" id="packageModal" tabindex="-1" aria-labelledby="packageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="packageModalLabel">Detail Paket Wisata</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="packageModalBody">
+                    <!-- Modal content will be loaded dynamically -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary" id="bookingBtn">Pesan Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Mengapa Memilih Paket Wisata Kami</h2>
+                <p class="text-muted">Pengalaman wisata terbaik dengan layanan profesional</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-gem fa-3x text-primary"></i>
+                        </div>
+                        <h5>Pengalaman Premium</h5>
+                        <p class="text-muted">Setiap paket dirancang untuk memberikan pengalaman terbaik</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-hand-holding-usd fa-3x text-primary"></i>
+                        </div>
+                        <h5>Harga Terjangkau</h5>
+                        <p class="text-muted">Paket wisata untuk berbagai anggaran</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-tie fa-3x text-primary"></i>
+                        </div>
+                        <h5>Guide Profesional</h5>
+                        <p class="text-muted">Dipandu oleh guide berpengalaman dan berpengetahuan luas</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        </div>
+                        <h5>Keamanan Terjamin</h5>
+                        <p class="text-muted">Keselamatan dan kenyamanan adalah prioritas utama kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">Ingin Paket Wisata yang Disesuaikan?</h2>
+            <p class="lead mb-4">Hubungi kami untuk mendiskusikan paket perjalanan khusus sesuai kebutuhan Anda</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Maziila Travel</h5>
+                    <p>Kami menyediakan pengalaman wisata terbaik di Indonesia dengan layanan profesional dan paket wisata yang menarik.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Halaman</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="destinations.html" class="text-white text-decoration-none">Destinasi</a></li>
+                        <li class="mb-2"><a href="packages.html" class="text-white text-decoration-none">Paket Wisata</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Merdeka No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 812 3456 7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@maziilatravel.com</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Berlangganan</h5>
+                    <p>Dapatkan update dan penawaran terbaru dari kami</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda">
+                        <button class="btn btn-primary" type="button">Daftar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Maziila Travel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Syarat & Ketentuan</a></li>
+                        <li class="list-inline-item ms-3"><a href="#" class="text-white text-decoration-none">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 

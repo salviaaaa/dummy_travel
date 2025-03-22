@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesona Indonesia Travel</title>
+    <title>Maziila Travel - Jelajahi Keindahan Indonesia</title>
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Pesona Indonesia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bold">Maziila</span> Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,13 +33,16 @@
                         <a class="nav-link active" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="destinasi.html">Destinasi</a>
+                        <a class="nav-link" href="destinations.html">Destinasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="paket.html">Paket Wisata</a>
+                        <a class="nav-link" href="packages.html">Paket Wisata</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="kontak.html">Kontak</a>
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -40,12 +51,13 @@
 
     <!-- Hero Section -->
     <header class="hero-section">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center text-white">
-                    <h1 class="fw-bold">Jelajahi Keindahan Indonesia</h1>
-                    <p class="lead">Temukan destinasi wisata menakjubkan di seluruh Nusantara</p>
-                    <a href="destinasi.html" class="btn btn-primary btn-lg">Mulai Petualangan</a>
+        <div class="overlay"></div>
+        <div class="container h-100 d-flex flex-column justify-content-center text-white">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold mb-4">Jelajahi Keindahan Indonesia</h1>
+                    <p class="lead mb-4">Temukan keajaiban alam, budaya, dan pesona destinasi wisata terbaik di Indonesia bersama Maziila Travel</p>
+                    <a href="destinations.html" class="btn btn-primary btn-lg">Mulai Petualangan</a>
                 </div>
             </div>
         </div>
@@ -54,69 +66,228 @@
     <!-- Featured Destinations -->
     <section class="featured-destinations py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Destinasi Populer</h2>
+            <div class="section-title text-center mb-5">
+                <h2>Destinasi Populer</h2>
+                <p class="text-muted">Temukan berbagai destinasi mengagumkan di Indonesia</p>
+            </div>
+            
+            <div class="row" id="featured-destinations-container">
+                <!-- Destinations will be loaded here from JSON -->
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="destinations.html" class="btn btn-outline-primary">Lihat Semua Destinasi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages -->
+    <section class="popular-packages py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Paket Wisata Populer</h2>
+                <p class="text-muted">Pilihan paket wisata terbaik untuk pengalaman tak terlupakan</p>
+            </div>
+            
+            <div class="row" id="popular-packages-container">
+                <!-- Packages will be loaded here from JSON -->
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="packages.html" class="btn btn-outline-primary">Lihat Semua Paket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Mengapa Memilih Kami</h2>
+                <p class="text-muted">Komitmen kami untuk memastikan pengalaman wisata terbaik Anda</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4>Destinasi Handpicked</h4>
+                        <p class="text-muted">Kami memilih destinasi terbaik yang menawarkan keindahan dan pengalaman otentik Indonesia.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-money-bill-wave fa-3x text-primary"></i>
+                        </div>
+                        <h4>Harga Terbaik</h4>
+                        <p class="text-muted">Dapatkan nilai terbaik untuk uang Anda dengan paket kami yang dirancang untuk berbagai anggaran.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4 h-100">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-headset fa-3x text-primary"></i>
+                        </div>
+                        <h4>Dukungan 24/7</h4>
+                        <p class="text-muted">Tim kami siap membantu Anda kapan saja selama perjalanan untuk pengalaman tanpa stres.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2>Apa Kata Pelanggan Kami</h2>
+                <p class="text-muted">Pengalaman nyata dari mereka yang telah berwisata bersama kami</p>
+            </div>
+            
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/800x600/?bali" class="card-img-top" alt="Bali">
-                        <div class="card-body">
-                            <h5 class="card-title">Bali</h5>
-                            <p class="card-text">Pulau Dewata dengan keindahan alam dan budaya yang memukau.</p>
-                            <a href="destinasi.html#bali" class="btn btn-primary">Selengkapnya</a>
+                    <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/testimonial-1.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Andi Pratama</h5>
+                                <small class="text-muted">Jakarta</small>
+                            </div>
                         </div>
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Perjalanan ke Raja Ampat bersama Maziila Travel benar-benar pengalaman yang tak terlupakan. Guide yang ramah dan profesional, akomodasi yang nyaman, dan pemandangan yang luar biasa!"</p>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/800x600/?borobudur" class="card-img-top" alt="Yogyakarta">
-                        <div class="card-body">
-                            <h5 class="card-title">Yogyakarta</h5>
-                            <p class="card-text">Kota budaya dengan pesona sejarah dan kuliner yang menggoda.</p>
-                            <a href="destinasi.html#yogyakarta" class="btn btn-primary">Selengkapnya</a>
+                    <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/testimonial-2.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Dewi Susanti</h5>
+                                <small class="text-muted">Surabaya</small>
+                            </div>
                         </div>
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Paket wisata Yogyakarta sangat worth it! Semua terorganisir dengan baik, kami tidak perlu khawatir tentang transportasi dan akomodasi. Terima kasih Maziila Travel!"</p>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/800x600/?raja-ampat" class="card-img-top" alt="Raja Ampat">
-                        <div class="card-body">
-                            <h5 class="card-title">Raja Ampat</h5>
-                            <p class="card-text">Surga bawah laut dengan keindahan terumbu karang yang menakjubkan.</p>
-                            <a href="destinasi.html#raja-ampat" class="btn btn-primary">Selengkapnya</a>
+                    <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="assets/images/testimonial-3.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <div>
+                                <h5 class="mb-0">Budi Santoso</h5>
+                                <small class="text-muted">Bandung</small>
+                            </div>
                         </div>
+                        <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Saya awalnya ragu, tapi setelah menggunakan jasa Maziila Travel untuk perjalanan ke Labuan Bajo, saya sangat puas! Pelayanan prima dan pengalaman melihat komodo langsung sangat mengesankan."</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-white text-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Pesona Indonesia</h5>
-                    <p>Menjelajahi keindahan Nusantara bersama kami.</p>
+            <h2 class="mb-4">Siap Untuk Petualangan Berikutnya?</h2>
+            <p class="lead mb-4">Kontak kami sekarang dan rencanakan liburan impian Anda di Indonesia</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4">Maziila Travel</h5>
+                    <p>Kami menyediakan pengalaman wisata terbaik di Indonesia dengan layanan profesional dan paket wisata yang menarik.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h5>Kontak</h5>
-                    <p>
-                        <i class="fas fa-phone"></i> +62 123 456 789<br>
-                        <i class="fas fa-envelope"></i> info@pesonaindonesia.com
-                    </p>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Halaman</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Beranda</a></li>
+                        <li class="mb-2"><a href="destinations.html" class="text-white text-decoration-none">Destinasi</a></li>
+                        <li class="mb-2"><a href="packages.html" class="text-white text-decoration-none">Paket Wisata</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Ikuti Kami</h5>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jl. Merdeka No. 123, Jakarta</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 812 3456 7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@maziilatravel.com</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Berlangganan</h5>
+                    <p>Dapatkan update dan penawaran terbaru dari kami</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda">
+                        <button class="btn btn-primary" type="button">Daftar</button>
                     </div>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2024 Pesona Indonesia. All rights reserved.</p>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Maziila Travel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Syarat & Ketentuan</a></li>
+                        <li class="list-inline-item ms-3"><a href="#" class="text-white text-decoration-none">Kebijakan Privasi</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -124,7 +295,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html> 

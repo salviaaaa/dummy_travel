@@ -259,6 +259,13 @@ async function openDestinationModal(id) {
         const modalBody = document.getElementById('destinationModalBody');
         if (!modalBody) return;
         
+        // Memetakan nama tempat wisata ke path gambar
+        const getImagePath = (placeName) => {
+            // Menghilangkan tanda kurung jika ada
+            const cleanName = placeName.replace(/\([^)]*\)/g, '').trim();
+            return `assets/images/${cleanName}.jpg`;
+        };
+        
         modalBody.innerHTML = `
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
@@ -276,12 +283,19 @@ async function openDestinationModal(id) {
                     </div>
                     <p>${destination.description}</p>
                     <div class="mb-4">
-                        <h5>Aktivitas Populer:</h5>
-                        <ul class="list-unstyled">
-                            ${destination.popular_activities.map(activity => `
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>${activity}</li>
+                        <h5>Tempat Wisata Populer:</h5>
+                        <div class="row g-3">
+                            ${destination.popular_activities.map(place => `
+                                <div class="col-6">
+                                    <div class="card h-100">
+                                        <img src="${getImagePath(place)}" class="card-img-top" alt="${place}">
+                                        <div class="card-body p-2">
+                                            <p class="card-text text-center mb-0 small fw-bold">${place}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             `).join('')}
-                        </ul>
+                        </div>
                     </div>
                     <div>
                         <h5>Waktu Terbaik untuk Berkunjung:</h5>

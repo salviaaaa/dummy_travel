@@ -50,9 +50,9 @@ img {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: #ff5252;
-    border-color: #ff5252;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.4);
 }
 
 .btn-outline-primary {
@@ -689,4 +689,38 @@ img {
     .booking-process .progress {
         height: 4px;
     }
+}
+
+/* Popular Places Cards in Destination Modal */
+.popular-place-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.popular-place-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.popular-place-card .card-img-top {
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.popular-place-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.popular-place-card .card-body {
+    padding: 0.75rem;
+    background-color: var(--white);
+}
+
+.popular-place-card .card-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--black);
 } 

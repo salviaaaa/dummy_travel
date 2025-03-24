@@ -1,9 +1,3 @@
-/**
- * Maziila Travel - Main JavaScript File
- * Menangani data dan interaksi untuk website Maziila Travel
- * Version 1.0
- */
-
 // Fungsi untuk mengambil data dari file JSON
 async function fetchData(file) {
     try {
@@ -259,11 +253,64 @@ async function openDestinationModal(id) {
         const modalBody = document.getElementById('destinationModalBody');
         if (!modalBody) return;
         
-        // Memetakan nama tempat wisata ke path gambar
+        // Fungsi untuk mendapatkan path gambar berdasarkan nama tempat wisata
         const getImagePath = (placeName) => {
-            // Menghilangkan tanda kurung jika ada
-            const cleanName = placeName.replace(/\([^)]*\)/g, '').trim();
-            return `assets/images/${cleanName}.jpg`;
+            // Mapping nama tempat wisata ke file gambar
+            const imageMap = {
+                // Jakarta
+                "Monumen Nasional (Monas)": "assets/images/destinations/Monas.jpg",
+                "Kota Tua Jakarta": "assets/images/destinations/Kota Tua.jpg",
+                "Taman Mini Indonesia Indah": "assets/images/destinations/TMII.jpg",
+                "Ancol": "assets/images/destinations/Ancol.jpg",
+                
+                // Bandung
+                "Kawah Putih": "assets/images/destinations/Kawah Putih.jpg",
+                "Tangkuban Perahu": "assets/images/destinations/Tangkuban Perahu.jpg",
+                "Jalan Braga": "assets/images/destinations/Braga.jpg",
+                "Lembang": "assets/images/destinations/Lembang.jpg",
+                
+                // Surabaya
+                "Tugu Pahlawan": "assets/images/destinations/Tugu Pahlawan.jpg",
+                "House of Sampoerna": "assets/images/destinations/House of Sampoerna.jpg",
+                "Jembatan Suramadu": "assets/images/destinations/Jembatan Suramadu.jpg",
+                "Kebun Binatang Surabaya": "assets/images/destinations/Kebun Binatang Surabaya.jpg",
+                
+                // Medan
+                "Istana Maimun": "assets/images/destinations/Istana Maimun.jpg",
+                "Masjid Raya Medan": "assets/images/destinations/Masjid Raya Medan.jpg",
+                "Tjong A Fie Mansion": "assets/images/destinations/Tjong A Fie Mansion.jpg",
+                "Danau Toba": "assets/images/destinations/Danau Toba.jpg",
+                
+                // Makassar
+                "Pantai Losari": "assets/images/destinations/Pantai Losari.jpg",
+                "Benteng Rotterdam": "assets/images/destinations/Benterng Rotterdam.jpg",
+                "Pulau Samalona": "assets/images/destinations/Pulau Samalona.jpg",
+                
+                // Semarang
+                "Lawang Sewu": "assets/images/destinations/Lawang Sewu.jpg",
+                "Kota Lama Semarang": "assets/images/destinations/Kota Lama.jpg",
+                "Sam Poo Kong": "assets/images/destinations/Sam Poo Kong.jpg",
+                "Masjid Agung Jawa Tengah": "assets/images/destinations/Masjid Agung Jawa Tengah.jpg",
+                
+                // Balikpapan
+                "Pantai Kemala": "assets/images/destinations/Pantai Kemala.jpg",
+                "Hutan Lindung Sungai Wain": "assets/images/destinations/Hutan Lindung Sungai Wain.jpg",
+                "Bukit Bangkirai": "assets/images/destinations/Bukit Bangkirai.jpg",
+                
+                // Palembang
+                "Jembatan Ampera": "assets/images/destinations/Jembatan Ampera.jpg",
+                "Benteng Kuto Besak": "assets/images/destinations/Benteng Kuto Besak.jpg",
+                "Pulau Kemaro": "assets/images/destinations/Pulau Kemaro.jpg",
+                "Museum Sultan Mahmud Badaruddin II": "assets/images/destinations/Museum Sultan Mahmud Badaruddin II.jpg",
+                
+                // Manado
+                "Taman Nasional Bunaken": "assets/images/destinations/Bunaken.jpg",
+                "Bukit Kasih": "assets/images/destinations/Bukit Kasih.jpg",
+                "Danau Tondano": "assets/images/destinations/Danau Tondano.jpg",
+                "Pulau Siladen": "assets/images/destinations/Pulau Siladen.jpg"
+            };
+            
+            return imageMap[placeName] || destination.image;
         };
         
         modalBody.innerHTML = `
@@ -284,13 +331,13 @@ async function openDestinationModal(id) {
                     <p>${destination.description}</p>
                     <div class="mb-4">
                         <h5>Tempat Wisata Populer:</h5>
-                        <div class="row g-3">
-                            ${destination.popular_activities.map(place => `
-                                <div class="col-6">
-                                    <div class="card h-100">
-                                        <img src="${getImagePath(place)}" class="card-img-top" alt="${place}">
-                                        <div class="card-body p-2">
-                                            <p class="card-text text-center mb-0 small fw-bold">${place}</p>
+                        <div class="row">
+                            ${destination.popular_activities.map(activity => `
+                                <div class="col-md-6 mb-3">
+                                    <div class="card popular-place-card h-100">
+                                        <img src="${getImagePath(activity)}" class="card-img-top" alt="${activity}">
+                                        <div class="card-body">
+                                            <p class="card-text"><i class="fas fa-map-marker-alt text-primary me-1"></i>${activity}</p>
                                         </div>
                                     </div>
                                 </div>

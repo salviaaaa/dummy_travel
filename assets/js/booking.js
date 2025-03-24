@@ -1,9 +1,3 @@
-/**
- * Maziila Travel - Booking JavaScript File
- * Menangani proses pemesanan pada website Maziila Travel
- * Version 1.0
- */
-
 // Inisialisasi saat dokumen dimuat
 document.addEventListener('DOMContentLoaded', function() {
     initBookingProcess();

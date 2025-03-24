@@ -330,7 +330,7 @@ async function openDestinationModal(id) {
                 "Sunset Watching": "assets/images/destinations/sunset-labuan.jpg",
 
                 // Yogyakarta
-                "Borobudur": "assets/images/destinations/malioboro.jpg",
+                "Borobudur": "assets/images/destinations/Borobudur.jpg",
                 "Keraton Yogyakarta": "assets/images/destinations/Keraton Yogyakarta.jpg",
                 "Malioboro": "assets/images/destinations/culinary-yogya.jpg",
                 "Pantai Parangtritis": "assets/images/destinations/Pantai Parangtritis.jpg",

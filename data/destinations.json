@@ -95,7 +95,7 @@
       "name": "Bali",
       "location": "Bali",
       "description": "Pulau dewata dengan pantai-pantai indah, budaya yang kaya, dan pemandangan alam yang memukau.",
-      "image": "assets/images/destinations/bali.jpg",
+      "image": "assets/images/destinations/Pantai Kuta.jpg",
       "rating": 4.8,
       "popular_activities": ["Pantai Kuta", "Tanah Lot", "Ubud Monkey Forest", "Tegalalang"],
       "best_time_to_visit": "April - October"
@@ -105,7 +105,7 @@
       "name": "Raja Ampat",
       "location": "Papua Barat",
       "description": "Surga bawah laut dengan keanekaragaman hayati laut terkaya di dunia dan pemandangan pulau karst yang menakjubkan.",
-      "image": "assets/images/destinations/raja-ampat.jpg",
+      "image": "assets/images/destinations/Pulau Wayag.jpg",
       "rating": 4.9,
       "popular_activities": ["Diving", "Snorkeling", "Pulau Wayag", "Piaynemo"],
       "best_time_to_visit": "October - April"
@@ -115,7 +115,7 @@
       "name": "Labuan Bajo",
       "location": "Nusa Tenggara Timur",
       "description": "Gerbang menuju Taman Nasional Komodo dan rumah bagi komodo, hewan purba yang hanya ada di Indonesia.",
-      "image": "assets/images/destinations/labuan-bajo.jpg",
+      "image": "assets/images/destinations/komodo_dragon.jpg",
       "rating": 4.7,
       "popular_activities": ["Komodo Dragon Tour", "Diving", "Pink Beach", "Sunset Watching"],
       "best_time_to_visit": "April - June"
@@ -125,7 +125,7 @@
       "name": "Yogyakarta",
       "location": "Jawa Tengah",
       "description": "Kota budaya dengan Candi Borobudur dan Prambanan serta tradisi Jawa yang masih kental.",
-      "image": "assets/images/destinations/yogyakarta.jpg",
+      "image": "assets/images/destinations/Borobudur.jpg",
       "rating": 4.6,
       "popular_activities": ["Candi Borobudur", "Keraton Yogyakarta", "Malioboro", "Pantai Parangtritis"],
       "best_time_to_visit": "May - September"

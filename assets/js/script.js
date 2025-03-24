@@ -581,6 +581,27 @@ function initContactForm() {
 
 // Event listener untuk saat dokumen selesai dimuat
 document.addEventListener('DOMContentLoaded', function() {
+    // Video background rotation
+    function rotateVideos() {
+        const videos = document.querySelectorAll('.video-background video');
+        if (videos.length > 0) {
+            let currentVideoIndex = 0;
+            
+            setInterval(() => {
+                // Sembunyikan semua video
+                videos.forEach(video => {
+                    video.classList.remove('active');
+                    video.style.opacity = 0;
+                });
+                
+                // Tampilkan video berikutnya
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                videos[currentVideoIndex].classList.add('active');
+                videos[currentVideoIndex].style.opacity = 1;
+            }, 5000); // Ganti video setiap 5 detik
+        }
+    }
+
     // Navbar scroll behavior
     const navbar = document.querySelector('.navbar');
     
@@ -600,6 +621,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPage.includes('index.html') || currentPage.endsWith('/')) {
         loadFeaturedDestinations();
         loadPopularPackages();
+        rotateVideos();
     } else if (currentPage.includes('destinations.html')) {
         loadAllDestinations();
     } else if (currentPage.includes('packages.html')) {

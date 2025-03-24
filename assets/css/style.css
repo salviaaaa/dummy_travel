@@ -144,21 +144,41 @@ img {
 .hero-section {
     position: relative;
     height: 100vh;
-    min-height: 500px;
-    background: url('../images/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    color: #fff;
+    overflow: hidden;
 }
 
-.hero-section .overlay {
+.video-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.video-background video.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .hero-section .container {
@@ -171,12 +191,29 @@ img {
     position: relative;
     height: 50vh;
     min-height: 400px;
-    background: url('../images/page-header-bg.jpg') no-repeat center center;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     color: #fff;
     margin-bottom: 2rem;
+}
+
+.page-header.about-header {
+    background-image: url('../images/aboutus.png');
+}
+
+.page-header.destinations-header {
+    background-image: url('../images/destination.png');
+}
+
+.page-header.packages-header {
+    background-image: url('../images/packages.png');
+}
+
+.page-header.contact-header {
+    background-image: url('../images/contact.png');
 }
 
 .page-header .overlay {

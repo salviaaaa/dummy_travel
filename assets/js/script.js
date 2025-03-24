@@ -411,6 +411,12 @@ async function openDestinationModal(id) {
                 "Orangutan Viewing": "assets/images/destinations/orangutan-tanjungputing.jpg",
                 "River Cruises": "assets/images/destinations/cruise-tanjungputing.jpg",
                 "Wildlife Observation": "assets/images/destinations/wildlife-tanjungputing.jpg",
+
+                // Kepulauan Anambas
+                "Pulau Bawah": "assets/images/destinations/pulau-bawah-anambas.jpg",
+                "Pulau Penjalin": "assets/images/destinations/pulau-penjalin-anambas.jpg",
+                "Diving di Terumbu Karang Anambas": "assets/images/destinations/diving-anambas.jpg",
+                "Wisata Bahari & Island Hopping": "assets/images/destinations/island-hopping-anambas.jpg"
             };
             
             return imageMap[placeName] || destination.image;

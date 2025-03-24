@@ -259,6 +259,16 @@
       "rating": 4.7,
       "popular_activities": ["Orangutan Viewing", "River Cruises", "Wildlife Observation"],
       "best_time_to_visit": "June - September"
+    },
+    {
+      "id": 29,
+      "name": "Kepulauan Anambas",
+      "location": "Kepulauan Riau",
+      "description": "Dikenal sebagai 'Maldives-nya Indonesia' dengan pantai pasir putih, laut biru jernih, dan kehidupan bawah laut yang kaya.",
+      "image": "assets/images/destinations/anambas.jpg",
+      "rating": 4.7,
+      "popular_activities": ["Pulau Bawah", "Pulau Penjalin", "Diving di Terumbu Karang Anambas", "Wisata Bahari & Island Hopping"],
+      "best_time_to_visit": "Maret - Oktober"
     }
   ]
-} 
+}

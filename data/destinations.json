@@ -97,7 +97,7 @@
       "description": "Pulau dewata dengan pantai-pantai indah, budaya yang kaya, dan pemandangan alam yang memukau.",
       "image": "assets/images/destinations/bali.jpg",
       "rating": 4.8,
-      "popular_activities": ["Surfing", "Snorkeling", "Temple Visits", "Beach Relaxation"],
+      "popular_activities": ["Pantai Kuta", "Tanah Lot", "Ubud Monkey Forest", "Tegalalang"],
       "best_time_to_visit": "April - October"
     },
     {
@@ -107,7 +107,7 @@
       "description": "Surga bawah laut dengan keanekaragaman hayati laut terkaya di dunia dan pemandangan pulau karst yang menakjubkan.",
       "image": "assets/images/destinations/raja-ampat.jpg",
       "rating": 4.9,
-      "popular_activities": ["Diving", "Snorkeling", "Island Hopping", "Bird Watching"],
+      "popular_activities": ["Diving", "Snorkeling", "Pulau Wayag", "Piaynemo"],
       "best_time_to_visit": "October - April"
     },
     {
@@ -127,7 +127,7 @@
       "description": "Kota budaya dengan Candi Borobudur dan Prambanan serta tradisi Jawa yang masih kental.",
       "image": "assets/images/destinations/yogyakarta.jpg",
       "rating": 4.6,
-      "popular_activities": ["Temple Visits", "Malioboro Shopping", "Traditional Arts", "Culinary Tours"],
+      "popular_activities": ["Candi Borobudur", "Keraton Yogyakarta", "Malioboro", "Pantai Parangtritis"],
       "best_time_to_visit": "May - September"
     },
     {
@@ -257,7 +257,7 @@
       "description": "Taman nasional yang terkenal sebagai habitat orangutan dan satwa liar lainnya.",
       "image": "assets/images/destinations/tanjung-puting.jpg",
       "rating": 4.7,
-      "popular_activities": ["Orangutan Viewing", "River Cruises", "Wildlife Observation", "Jungle Trekking"],
+      "popular_activities": ["Orangutan Viewing", "River Cruises", "Wildlife Observation"],
       "best_time_to_visit": "June - September"
     }
   ]

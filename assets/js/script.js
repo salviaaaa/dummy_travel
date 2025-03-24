@@ -285,6 +285,7 @@ async function openDestinationModal(id) {
                 "Pantai Losari": "assets/images/destinations/Pantai Losari.jpg",
                 "Benteng Rotterdam": "assets/images/destinations/Benterng Rotterdam.jpg",
                 "Pulau Samalona": "assets/images/destinations/Pulau Samalona.jpg",
+                "Trans Studio Makassar": "assets/images/destinations/Trans Studio Makassar.jpg",
                 
                 // Semarang
                 "Lawang Sewu": "assets/images/destinations/Lawang Sewu.jpg",
@@ -296,6 +297,7 @@ async function openDestinationModal(id) {
                 "Pantai Kemala": "assets/images/destinations/Pantai Kemala.jpg",
                 "Hutan Lindung Sungai Wain": "assets/images/destinations/Hutan Lindung Sungai Wain.jpg",
                 "Bukit Bangkirai": "assets/images/destinations/Bukit Bangkirai.jpg",
+                "Penangkaran Buaya Teritip": "assets/images/destinations/Penangkaran Buaya Teritip.jpg",
                 
                 // Palembang
                 "Jembatan Ampera": "assets/images/destinations/Jembatan Ampera.jpg",
@@ -307,7 +309,108 @@ async function openDestinationModal(id) {
                 "Taman Nasional Bunaken": "assets/images/destinations/Bunaken.jpg",
                 "Bukit Kasih": "assets/images/destinations/Bukit Kasih.jpg",
                 "Danau Tondano": "assets/images/destinations/Danau Tondano.jpg",
-                "Pulau Siladen": "assets/images/destinations/Pulau Siladen.jpg"
+                "Pulau Siladen": "assets/images/destinations/Pulau Siladen.jpg",
+
+                // Bali
+                "Pantai Kuta": "assets/images/destinations/Pantai Kuta.jpg",
+                "Tanah Lot": "assets/images/destinations/Tanah Lot.jpg",
+                "Ubud Monkey Forest": "assets/images/destinations/Ubud Monkey Forest.jpg",
+                "Tegalalang": "assets/images/destinations/Tegalalang.jpg",
+
+                // Raja Ampat
+                "Diving": "assets/images/destinations/diving-raja-ampat.jpg",
+                "Island Hopping": "assets/images/destinations/island-hopping-raja-ampat.jpg",
+                "Pulau Wayag": "assets/images/destinations/Pulau Wayag.jpg",
+                "Piaynemo": "assets/images/destinations/Piaynemo.jpg",
+
+                // Labuan Bajo
+                "Komodo Dragon Tour": "assets/images/destinations/komodo-dragon.jpg",
+                "Diving": "assets/images/destinations/diving_labuan.jpg",
+                "Pink Beach": "assets/images/destinations/pink-beach.jpg",
+                "Sunset Watching": "assets/images/destinations/sunset-labuan.jpg",
+
+                // Yogyakarta
+                "Borobudur": "assets/images/destinations/malioboro.jpg",
+                "Keraton Yogyakarta": "assets/images/destinations/Keraton Yogyakarta.jpg",
+                "Malioboro": "assets/images/destinations/culinary-yogya.jpg",
+                "Pantai Parangtritis": "assets/images/destinations/Pantai Parangtritis.jpg",
+
+                // Danau Toba Activities
+                "Boat Tours": "assets/images/destinations/boat-tours-toba.jpg",
+                "Cultural Visits": "assets/images/destinations/cultural-toba.jpg",
+                "Swimming": "assets/images/destinations/swimming-toba.jpg",
+                "Hiking": "assets/images/destinations/hiking-toba.jpg",
+
+                // Lombok
+                "Trekking Mount Rinjani": "assets/images/destinations/rinjani.jpg",
+                "Beach Hopping": "assets/images/destinations/beach-hopping-lombok.jpg",
+                "Surfing": "assets/images/destinations/surfing-lombok.jpg",
+                "Visiting Gili Islands": "assets/images/destinations/gili-islands.jpg",
+
+                // Bromo
+                "Sunrise Tours": "assets/images/destinations/sunrise-bromo.jpg",
+                "Jeep Adventures": "assets/images/destinations/jeep-bromo.jpg",
+                "Hiking": "assets/images/destinations/hiking-bromo.jpg",
+                "Photography": "assets/images/destinations/photography-bromo.jpg",
+
+                // Tana Toraja
+                "Cultural Tours": "assets/images/destinations/cultural-toraja.jpg",
+                "Traditional Funeral Ceremonies": "assets/images/destinations/funeral-toraja.jpg",
+                "Trekking": "assets/images/destinations/trekking-toraja.jpg",
+                "Village Visits": "assets/images/destinations/village-toraja.jpg",
+
+                // Wakatobi
+                "Diving": "assets/images/destinations/diving_wakatobi.jpg",
+                "Snorkeling": "assets/images/destinations/snorkeling_wakatobi.jpg",
+                "Marine Conservation": "assets/images/destinations/marine-wakatobi.jpg",
+                "Beach Relaxation": "assets/images/destinations/beach-wakatobi.jpg",
+
+                // Belitung
+                "Island Hopping": "assets/images/destinations/island-belitung.jpg",
+                "Snorkeling": "assets/images/destinations/snorkeling-belitung.jpg",                
+                "Lighthouse Visits": "assets/images/destinations/lighthouse-belitung.jpg",
+                "Local Cuisine": "assets/images/destinations/cuisine-belitung.jpg",
+
+                // Kawah Ijen
+                "Blue Fire Night Trek": "assets/images/destinations/kawah-ijen.jpg",
+                "Crater Lake Visit": "assets/images/destinations/crater-ijen.jpg",
+                "Sunrise Viewing": "assets/images/destinations/sunrise-ijen.jpg",
+                "Sulfur Mining Tour": "assets/images/destinations/sulfur-mining-ijen.jpg",
+
+                // Derawan Islands
+                "Swimming with Jellyfish": "assets/images/destinations/jellyfish-derawan.jpg",
+                "Diving": "assets/images/destinations/diving-derawan.jpg",
+                "Sea Turtle Watching": "assets/images/destinations/turtle-derawan.jpg",
+                "Relaxation": "assets/images/destinations/relax-derawan.jpg",
+
+                // Wae Rebo
+                "Cultural Immersion": "assets/images/destinations/cultural-waerebo.jpg",
+                "Traditional House Visit": "assets/images/destinations/house-waerebo.jpg",
+                "Trekking": "assets/images/destinations/trek-waerebo.jpg",
+                "Photography": "assets/images/destinations/photo-waerebo.jpg",
+
+                // Sumba
+                "Pasola Festival": "assets/images/destinations/pasola-sumba.jpg",
+                "Traditional Village Tours": "assets/images/destinations/village-sumba.jpg",
+                "Beach Exploration": "assets/images/destinations/beach-sumba.jpg",
+                "Cultural Learning": "assets/images/destinations/culture-sumba.jpg",
+
+                // Bukittinggi
+                "Sianok Canyon Tour": "assets/images/destinations/sianok-bukittinggi.jpg",
+                "Japanese Tunnels": "assets/images/destinations/tunnels-bukittinggi.jpg",
+                "Culinary Tours": "assets/images/destinations/culinary-bukittinggi.jpg",
+                "Cultural Visits": "assets/images/destinations/cultural-bukittinggi.jpg",
+
+                // Kepulauan Seribu
+                "Snorkeling": "assets/images/destinations/snorkeling-seribu.jpg",
+                "Island Hopping": "assets/images/destinations/hopping-seribu.jpg",
+                "Beach Activities": "assets/images/destinations/beach-seribu.jpg",
+                "Marine Tourism": "assets/images/destinations/marine-seribu.jpg",
+
+                // Tanjung Puting
+                "Orangutan Viewing": "assets/images/destinations/orangutan-tanjungputing.jpg",
+                "River Cruises": "assets/images/destinations/cruise-tanjungputing.jpg",
+                "Wildlife Observation": "assets/images/destinations/wildlife-tanjungputing.jpg",
             };
             
             return imageMap[placeName] || destination.image;
@@ -630,4 +733,4 @@ document.addEventListener('DOMContentLoaded', function() {
 // Definisikan fungsi untuk global scope agar bisa dipanggil dari event handler HTML
 window.openDestinationModal = openDestinationModal;
 window.openPackageModal = openPackageModal;
-window.redirectToBooking = redirectToBooking; 
+window.redirectToBooking = redirectToBooking;

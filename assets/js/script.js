@@ -324,15 +324,15 @@ async function openDestinationModal(id) {
                 "Piaynemo": "assets/images/destinations/Piaynemo.jpg",
 
                 // Labuan Bajo
-                "Komodo Dragon Tour": "assets/images/destinations/komodo-dragon.jpg",
+                "Komodo Dragon Tour": "assets/images/destinations/komodo_dragon.jpg",
                 "Diving": "assets/images/destinations/diving_labuan.jpg",
-                "Pink Beach": "assets/images/destinations/pink-beach.jpg",
-                "Sunset Watching": "assets/images/destinations/sunset-labuan.jpg",
+                "Pink Beach": "assets/images/destinations/pink_beach.jpg",
+                "Sunset Watching": "assets/images/destinations/sunset_labuan.jpg",
 
                 // Yogyakarta
                 "Borobudur": "assets/images/destinations/Borobudur.jpg",
                 "Keraton Yogyakarta": "assets/images/destinations/Keraton Yogyakarta.jpg",
-                "Malioboro": "assets/images/destinations/culinary-yogya.jpg",
+                "Malioboro": "assets/images/destinations/Malioboro.jpg",
                 "Pantai Parangtritis": "assets/images/destinations/Pantai Parangtritis.jpg",
 
                 // Danau Toba Activities

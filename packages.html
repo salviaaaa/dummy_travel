@@ -70,7 +70,7 @@
     <!-- Page Header -->
     <header class="page-header packages-header">
         <div class="overlay"></div>
-        <div class="container h-100 d-flex flex-column justify-content-center text-white text-center">
+        <div class="container text-white text-center">
             <h1 class="display-4 fw-bold">Paket Wisata</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
@@ -258,7 +258,7 @@
                     <p>Dapatkan update dan penawaran terbaru dari kami</p>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda">
-                        <button class="btn btn-primary" type="button">Daftar</button>
+                        <button class="btn btn-primary" type="button">Langganan</button>
                     </div>
                 </div>
             </div>
@@ -279,6 +279,24 @@
         </div>
     </footer>
 
+    <!-- Newsletter Modal -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsletterModalLabel">Berhasil Berlangganan!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Terima kasih telah berlangganan newsletter kami. Anda akan mendapatkan informasi terbaru dan penawaran menarik dari kami.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -286,14 +304,14 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        // Hide loading screen after 1 second
+        // Hide loading screen after 5 milliseconds
         setTimeout(function() {
             const loadingScreen = document.getElementById('loading-screen');
             loadingScreen.style.opacity = '0';
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 500);
-        }, 1000);
+        }, 5);
     </script>
 </body>
 </html> 

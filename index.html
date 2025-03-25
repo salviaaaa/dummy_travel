@@ -81,9 +81,9 @@
             </video>
         </div>
         <div class="overlay"></div>
-        <div class="container h-100 d-flex flex-column justify-content-center text-white">
+        <div class="container text-white">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-lg-8 col-md-10">
                     <h1 class="display-4 fw-bold mb-4">Jelajahi Keindahan Indonesia</h1>
                     <p class="lead mb-4">Temukan keajaiban alam, budaya, dan pesona destinasi wisata terbaik di Indonesia bersama Maziila Travel</p>
                     <a href="destinations.html" class="btn btn-primary btn-lg">Mulai Petualangan</a>
@@ -192,7 +192,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="assets/images/testimonial-1.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <img src="assets/images/testimonial-1.png" alt="Testimonial" class="rounded-circle testimonial-img me-3">
                             <div>
                                 <h5 class="mb-0">Andi Pratama</h5>
                                 <small class="text-muted">Jakarta</small>
@@ -212,7 +212,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="assets/images/testimonial-2.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <img src="assets/images/testimonial-2.png" alt="Testimonial" class="rounded-circle testimonial-img me-3">
                             <div>
                                 <h5 class="mb-0">Dewi Susanti</h5>
                                 <small class="text-muted">Surabaya</small>
@@ -232,7 +232,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="testimonial-card h-100 p-4 bg-white rounded shadow-sm">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="assets/images/testimonial-3.jpg" alt="Testimonial" class="rounded-circle testimonial-img me-3">
+                            <img src="assets/images/testimonial-3.png" alt="Testimonial" class="rounded-circle testimonial-img me-3">
                             <div>
                                 <h5 class="mb-0">Budi Santoso</h5>
                                 <small class="text-muted">Bandung</small>
@@ -299,6 +299,24 @@
         </div>
     </div>
 
+    <!-- Newsletter Modal -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsletterModalLabel">Berhasil Berlangganan!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Terima kasih telah berlangganan newsletter kami. Anda akan mendapatkan informasi terbaru dan penawaran menarik dari kami.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer py-5 bg-dark text-white">
         <div class="container">
@@ -339,7 +357,7 @@
                     <p>Dapatkan update dan penawaran terbaru dari kami</p>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email Anda">
-                        <button class="btn btn-primary" type="button">Daftar</button>
+                        <button class="btn btn-primary" type="button">Langganan</button>
                     </div>
                 </div>
             </div>
@@ -367,14 +385,14 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        // Hide loading screen after 1 second
+        // Hide loading screen after 5 milliseconds
         setTimeout(function() {
             const loadingScreen = document.getElementById('loading-screen');
             loadingScreen.style.opacity = '0';
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 500);
-        }, 1000);
+        }, 5);
     </script>
 </body>
 </html> 

@@ -545,15 +545,15 @@ async function openPackageModal(id) {
             </div>
         `;
         
-        // Simpan ID paket ke dalam modal
-        const packageModal = document.getElementById('packageModal');
-        if (packageModal) {
-            packageModal._packageId = id;
-        }
-        
         // Tampilkan modal
         const modal = new bootstrap.Modal(document.getElementById('packageModal'));
         modal.show();
+        
+        // Event listener untuk tombol booking
+        const bookingBtn = document.getElementById('bookingBtn');
+        if (bookingBtn) {
+            bookingBtn.onclick = () => redirectToBooking(id);
+        }
     } catch (error) {
         console.error(`Terjadi kesalahan: ${error}`);
     }

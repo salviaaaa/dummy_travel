@@ -1,10 +1,13 @@
-// Inisialisasi saat dokumen dimuat
+/* Implementasi khusus untuk booking.html */
+/* File ini menangani semua fungsionalitas terkait proses pemesanan paket wisata */
+
+// Inisialisasi saat dokumen dimuat - Implementasi untuk booking.html
 document.addEventListener('DOMContentLoaded', function() {
     initBookingProcess();
     initDatePicker();
     loadPackages();
     
-    // Cek apakah ada ID paket yang disimpan dari halaman sebelumnya
+    // Cek apakah ada ID paket yang disimpan dari halaman sebelumnya (dari packages.html)
     const selectedPackageId = sessionStorage.getItem('selectedPackageId');
     if (selectedPackageId) {
         // Tunggu hingga paket dimuat
@@ -19,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Inisialisasi proses booking
+// Inisialisasi proses booking - Implementasi untuk booking.html
+// Fungsi ini menginisialisasi semua event listener untuk proses pemesanan
 function initBookingProcess() {
     // Event listener untuk tombol next
     const nextButtons = document.querySelectorAll('.next-step');
@@ -63,7 +67,7 @@ function initBookingProcess() {
         paymentButton.addEventListener('click', processPayment);
     }
     
-    // Set min date ke hari ini
+    // Set min date ke hari ini untuk input tanggal
     const travelDateInput = document.getElementById('travelDate');
     if (travelDateInput) {
         const today = new Date();
@@ -72,9 +76,9 @@ function initBookingProcess() {
     }
 }
 
-// Inisialisasi date picker
+// Inisialisasi date picker - Implementasi untuk booking.html
+// Fungsi ini mengatur tanggal minimal dan default untuk input tanggal perjalanan
 function initDatePicker() {
-    // Atur tanggal minimal ke hari ini
     const travelDateInput = document.getElementById('travelDate');
     if (travelDateInput) {
         const today = new Date();
@@ -88,7 +92,8 @@ function initDatePicker() {
     }
 }
 
-// Fungsi untuk beralih antar langkah
+// Fungsi untuk beralih antar langkah - Implementasi untuk booking.html
+// Menangani perpindahan antara langkah-langkah dalam proses pemesanan
 function goToStep(stepNumber) {
     // Validasi input sebelum pindah
     if (!validateCurrentStep(parseInt(stepNumber) - 1)) {
@@ -142,7 +147,8 @@ function goToStep(stepNumber) {
     });
 }
 
-// Validasi langkah saat ini sebelum pindah ke langkah berikutnya
+// Validasi langkah saat ini - Implementasi untuk booking.html
+// Memvalidasi input user pada setiap langkah sebelum melanjutkan
 function validateCurrentStep(currentStep) {
     if (currentStep === 1) {
         // Validasi langkah 1 (detail pemesanan)
@@ -220,13 +226,15 @@ function validateCurrentStep(currentStep) {
     return true;
 }
 
-// Validasi format email
+// Validasi format email - Implementasi untuk booking.html
+// Memvalidasi format email yang dimasukkan user
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Muat paket wisata dari data JSON
+// Muat paket wisata dari data JSON - Implementasi untuk booking.html
+// Mengambil dan menampilkan daftar paket wisata dalam dropdown
 async function loadPackages() {
     const packageSelect = document.getElementById('packageSelect');
     if (!packageSelect) return;
@@ -251,7 +259,8 @@ async function loadPackages() {
     }
 }
 
-// Update detail paket yang dipilih
+// Update detail paket yang dipilih - Implementasi untuk booking.html
+// Memperbarui tampilan detail paket saat user memilih paket
 function updateSelectedPackage() {
     const packageSelect = document.getElementById('packageSelect');
     if (!packageSelect || !packageSelect.value) return;
@@ -282,7 +291,8 @@ function updateSelectedPackage() {
     updateTotalPrice();
 }
 
-// Update tampilan bintang rating
+// Update tampilan bintang rating - Implementasi untuk booking.html
+// Menampilkan rating dalam bentuk bintang
 function updateRatingStars(rating) {
     const ratingContainer = document.getElementById('package-rating');
     if (!ratingContainer) return;
@@ -290,7 +300,8 @@ function updateRatingStars(rating) {
     ratingContainer.innerHTML = generateStarRating(rating);
 }
 
-// Update total harga berdasarkan paket dan jumlah peserta
+// Update total harga - Implementasi untuk booking.html
+// Menghitung dan memperbarui total harga berdasarkan paket dan jumlah peserta
 function updateTotalPrice() {
     const packageSelect = document.getElementById('packageSelect');
     const participants = document.getElementById('participants');
@@ -307,7 +318,8 @@ function updateTotalPrice() {
     document.getElementById('package-price').textContent = formatRupiah(totalPrice);
 }
 
-// Update ringkasan pemesanan pada langkah pembayaran
+// Update ringkasan pemesanan - Implementasi untuk booking.html
+// Memperbarui tampilan ringkasan pemesanan pada langkah pembayaran
 function updateBookingSummary() {
     const packageSelect = document.getElementById('packageSelect');
     const travelDate = document.getElementById('travelDate');
@@ -341,21 +353,24 @@ function updateBookingSummary() {
     document.getElementById('total-payment').textContent = formatRupiah(totalPrice);
 }
 
-// Format tanggal dari YYYY-MM-DD ke format lokal
+// Format tanggal - Implementasi untuk booking.html
+// Mengubah format tanggal dari YYYY-MM-DD ke format lokal Indonesia
 function formatDate(dateString) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const date = new Date(dateString);
     return date.toLocaleDateString('id-ID', options);
 }
 
-// Proses pembayaran
+// Proses pembayaran - Implementasi untuk booking.html
+// Menangani proses pembayaran (simulasi)
 function processPayment() {
     // Di implementasi nyata, ini akan menangani proses pembayaran
     // Untuk demo, kita langsung lanjut ke langkah konfirmasi
     generateBookingNumber();
 }
 
-// Membuat nomor pemesanan
+// Membuat nomor pemesanan - Implementasi untuk booking.html
+// Menghasilkan nomor pemesanan unik
 function generateBookingNumber() {
     const bookingNumber = document.getElementById('booking-number');
     const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
@@ -367,7 +382,8 @@ function generateBookingNumber() {
     bookingNumber.textContent = `MT-${year}${month}${day}-${randomNum}`;
 }
 
-// Isi data pada tanda terima
+// Isi data pada tanda terima - Implementasi untuk booking.html
+// Mengisi data pada tanda terima setelah pembayaran berhasil
 function fillReceipt() {
     const packageSelect = document.getElementById('packageSelect');
     const travelDate = document.getElementById('travelDate');
@@ -393,7 +409,8 @@ function fillReceipt() {
     document.getElementById('receipt-payment').textContent = formatRupiah(totalPrice);
 }
 
-// Cetak tanda terima
+// Cetak tanda terima - Implementasi untuk booking.html
+// Membuka jendela cetak untuk mencetak tanda terima
 function printReceipt() {
     const receiptContent = document.querySelector('.booking-receipt .card').outerHTML;
     const printWindow = window.open('', '_blank');

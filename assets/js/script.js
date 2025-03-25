@@ -1,4 +1,45 @@
-// Fungsi untuk mengambil data dari file JSON
+/*
+ * IMPLEMENTASI JAVASCRIPT UNTUK SEMUA HALAMAN
+ * File ini berisi fungsi-fungsi yang digunakan di berbagai halaman website
+ * 
+ * Implementasi pada halaman:
+ * 1. index.html:
+ *    - Video background di hero section
+ *    - Menampilkan featured destinations
+ *    - Menampilkan popular packages
+ *    - Loading screen
+ * 
+ * 2. about.html:
+ *    - Navbar scroll effect
+ *    - Loading screen
+ *    - Fungsi umum (format Rupiah, rating bintang)
+ * 
+ * 3. booking.html:
+ *    - Loading screen
+ *    - Navbar scroll effect
+ *    - Fungsi format data
+ * 
+ * 4. contact.html:
+ *    - Form submission handling
+ *    - Loading screen
+ *    - Navbar scroll effect
+ * 
+ * 5. destinations.html:
+ *    - Menampilkan featured destinations
+ *    - Loading screen
+ *    - Navbar scroll effect
+ * 
+ * 6. packages.html:
+ *    - Menampilkan popular packages
+ *    - Package selection
+ *    - Loading screen
+ *    - Navbar scroll effect
+ */
+
+/* 
+ * FUNGSI UTAMA UNTUK MENGAMBIL DATA
+ * Digunakan di semua halaman untuk fetch data JSON
+ */
 async function fetchData(file) {
     try {
         const response = await fetch(file);
@@ -13,7 +54,10 @@ async function fetchData(file) {
     }
 }
 
-// Fungsi untuk memformat harga dalam format Rupiah
+/*
+ * FUNGSI FORMAT RUPIAH
+ * Digunakan di semua halaman untuk format harga
+ */
 function formatRupiah(price) {
     return new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -22,7 +66,13 @@ function formatRupiah(price) {
     }).format(price);
 }
 
-// Fungsi untuk mengambil dan menampilkan destinasi unggulan pada halaman beranda
+/*
+ * FUNGSI FEATURED DESTINATIONS
+ * Implementasi: index.html, destinations.html
+ * - Menampilkan destinasi unggulan
+ * - Sort berdasarkan rating
+ * - Limit 6 destinasi teratas
+ */
 async function loadFeaturedDestinations() {
     const container = document.getElementById('featured-destinations-container');
     if (!container) return;
@@ -71,7 +121,13 @@ async function loadFeaturedDestinations() {
     }
 }
 
-// Fungsi untuk mengambil dan menampilkan paket populer pada halaman beranda
+/*
+ * FUNGSI POPULAR PACKAGES
+ * Implementasi: index.html, packages.html
+ * - Menampilkan paket wisata populer
+ * - Sort berdasarkan rating
+ * - Limit 3 paket teratas
+ */
 async function loadPopularPackages() {
     const container = document.getElementById('popular-packages-container');
     if (!container) return;
@@ -120,7 +176,12 @@ async function loadPopularPackages() {
     }
 }
 
-// Fungsi untuk menghasilkan rating bintang
+/*
+ * FUNGSI GENERATE STAR RATING
+ * Implementasi: Semua halaman yang menampilkan rating
+ * - Menghasilkan HTML untuk tampilan bintang
+ * - Support untuk setengah bintang
+ */
 function generateStarRating(rating) {
     let stars = '';
     const fullStars = Math.floor(rating);
@@ -142,7 +203,13 @@ function generateStarRating(rating) {
     return stars;
 }
 
-// Fungsi untuk menampilkan semua destinasi pada halaman destinasi
+/*
+ * FUNGSI LOAD ALL DESTINATIONS
+ * Implementasi: destinations.html
+ * - Menampilkan semua destinasi
+ * - Fitur filter dan search
+ * - Tampilan card dengan detail lengkap
+ */
 async function loadAllDestinations() {
     const container = document.getElementById('destinations-container');
     if (!container) return;
@@ -191,7 +258,13 @@ async function loadAllDestinations() {
     }
 }
 
-// Fungsi untuk menampilkan semua paket wisata pada halaman paket
+/*
+ * FUNGSI LOAD ALL PACKAGES
+ * Implementasi: packages.html
+ * - Menampilkan semua paket wisata
+ * - Fitur filter berdasarkan harga dan durasi
+ * - Tampilan card dengan detail lengkap
+ */
 async function loadAllPackages() {
     const container = document.getElementById('packages-container');
     if (!container) return;
@@ -241,7 +314,13 @@ async function loadAllPackages() {
     }
 }
 
-// Fungsi untuk menampilkan detail destinasi pada modal
+/*
+ * FUNGSI DESTINATION MODAL
+ * Implementasi: destinations.html
+ * - Menampilkan detail destinasi dalam modal
+ * - Galeri tempat wisata populer
+ * - Informasi lengkap destinasi
+ */
 async function openDestinationModal(id) {
     try {
         const data = await fetchData('data/destinations.json');
@@ -469,14 +548,26 @@ async function openDestinationModal(id) {
     }
 }
 
-// Fungsi untuk menangani tombol booking dari modal paket
+/*
+ * FUNGSI BOOKING REDIRECT
+ * Implementasi: packages.html -> booking.html
+ * - Menyimpan ID paket yang dipilih
+ * - Redirect ke halaman booking
+ */
 function redirectToBooking(packageId) {
     // Simpan ID paket di sessionStorage untuk diambil di halaman booking
     sessionStorage.setItem('selectedPackageId', packageId);
     window.location.href = 'booking.html';
 }
 
-// Fungsi untuk menampilkan detail paket wisata pada modal
+/*
+ * FUNGSI PACKAGE MODAL
+ * Implementasi: packages.html
+ * - Menampilkan detail paket dalam modal
+ * - Informasi harga dan durasi
+ * - Daftar destinasi yang dikunjungi
+ * - Tombol untuk booking
+ */
 async function openPackageModal(id) {
     try {
         const packagesData = await fetchData('data/packages.json');

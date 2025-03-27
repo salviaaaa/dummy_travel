@@ -176,11 +176,13 @@ img {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+    visibility: hidden;
 }
 
 .video-background video.active {
     opacity: 1;
+    visibility: visible;
 }
 
 /* Overlay - Implementasi untuk hero section dan page headers */
@@ -407,7 +409,7 @@ img {
     color: var(--gray-color);
     margin-bottom: 1rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 3;      
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

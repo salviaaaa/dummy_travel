@@ -793,6 +793,40 @@ function initNewsletter() {
     });
 }
 
+// Fungsi untuk mengatur rotasi video background
+function initVideoBackground() {
+    const videos = document.querySelectorAll('.video-background video');
+    if (!videos.length) return;
+
+    let currentVideoIndex = 0;
+    
+    // Fungsi untuk mengganti video yang aktif
+    function switchVideo() {
+        // Sembunyikan video saat ini
+        videos[currentVideoIndex].classList.remove('active');
+        
+        // Pindah ke video berikutnya
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        
+        // Tampilkan video berikutnya
+        videos[currentVideoIndex].classList.add('active');
+        
+        // Pastikan video berikutnya diputar
+        videos[currentVideoIndex].play().catch(function(error) {
+            console.log("Video playback error:", error);
+        });
+    }
+    
+    // Inisialisasi video pertama
+    videos[0].classList.add('active');
+    videos[0].play().catch(function(error) {
+        console.log("Initial video playback error:", error);
+    });
+    
+    // Ganti video setiap 8 detik
+    setInterval(switchVideo, 8000);
+}
+
 // Inisialisasi semua fungsi saat dokumen dimuat
 document.addEventListener('DOMContentLoaded', function() {
     // Inisialisasi loading screen
@@ -810,16 +844,19 @@ document.addEventListener('DOMContentLoaded', function() {
     initNewsletter();
 
     // Load data berdasarkan halaman
-    loadFeaturedDestinations();
-    loadPopularPackages();
-    loadAllDestinations();
-    loadAllPackages();
+        loadFeaturedDestinations();
+        loadPopularPackages();
+        loadAllDestinations();
+        loadAllPackages();
     initDestinationSearch();
     initPackageSearch();
-    initContactForm();
+        initContactForm();
+
+    // Inisialisasi video background
+    initVideoBackground();
 });
 
 // Definisikan fungsi untuk global scope agar bisa dipanggil dari event handler HTML
 window.openDestinationModal = openDestinationModal;
 window.openPackageModal = openPackageModal;
-window.redirectToBooking = redirectToBooking;
+window.redirectToBooking = redirectToBooking; 
